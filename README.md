@@ -18,12 +18,12 @@ Firstly, PANDAS should be initialized by:
 ```python
 import pandas as pd
 ```
-
+First, to read and write CSV file as there is a provided **cars.csv file** which contains the needed information **pd.read_csv()** is used.
 ```python
 cars=pd.read_csv('cars.csv')
 cars
 ```
-
+The built-in function **.shape** is used to display the shape of the car and **.columns** for the complete list of column names of cars.
 ```python
 print('Shape:',cars.shape)
 print(cars.columns)
@@ -33,12 +33,12 @@ Index(['Model', 'mpg', 'cyl', 'disp', 'hp', 'drat', 'wt', 'qsec', 'vs', 'am',
        'gear', 'carb'],
       dtype='object')
 ```
-
+Positional slicing **.iloc** is used to generate the cars 6 to 10 containing rows 6 through 10 of the dataset, as **5** the first integer that is inclusive and **10** is the last integer that is exclusive. And the data is stored in **cars_6_10**.
 ```python
 cars_6_to_10=cars.iloc[5:10]
 cars_6_to_10
 ```
-
+Then, to locate the specific columns (Model, mpg, cyl, hp, and gear, in that order) from cars 6 to 10 the function **.loc** is used to select single row of subset of rows. The operator ":" is used to generate the whole section as there is no indicated index.
 ```python
 cars_6_to_10.loc[:,['Model', 'mpg', 'cyl', 'hp',  'gear']]
 # output
@@ -54,14 +54,16 @@ cars_6_to_10.loc[:,['Model', 'mpg', 'cyl', 'hp',  'gear']]
 >a. Display the complete row for Toyota Corolla.
 >b. For Pontiac Firebird, display only Model, mpg, hp, and wt.
 >Store the two results in toyota and pontiac, respectively. Do not use a hard-coded row number to locate either model.
+The following functions were used in this problem:
+>Since PANDAS is already initialized in the first problem we can move on to the next function.
+To display the complete row for Toyota Corolla boolean indexing is used to generate only the row for Toyota Corolla.
 ```python
 cars[cars['Model']=='Toyota Corolla']
 # output
              Model  mpg	  cyl	disp	hp	drat	wt	  qsec	vs	am	gear	carb
 19	Toyota Corolla	33.9	4	  71.1	65	4.22	1.835	19.9	1	  1	  4	    1
-
 ```
-
+To display the row for Pontiac Firebird boolean indexing is used and **.loc** is used to indicate the specific columns needed by providing the specific index (Model, mpg, hp, wt).
 ```python
 cars.loc[(cars['Model']=='Pontiac Firebird'), ['Model', 'mpg', 'hp', 'wt']]
 # output
@@ -80,7 +82,7 @@ selected_cars
 27	Lotus Europa	30.4	4	113	5
 29	Ferrari Dino	19.7	6	175	5
 ```
-
+The built-in function **.shape** is used to display the shape of the selected_car and **.loc** to generate the Model section of the selected cars.
 ```python
 print(selected_cars.loc[:,['Model']])
 print('Shape:', selected_cars.shape)
@@ -94,11 +96,11 @@ Shape: (3, 5)
 
 Thank you for reading!
 
-To see the main python program, click this [link](https://github.com/samanthaelvambuena-rgb/ELVAMBUENA_2ECE-D_PA2/blob/main/PA2_ELVAMBUENA.ipynb) and download.
+To see the main python program, click this [link](https://github.com/samanthaelvambuena-rgb/ELVAMBUENA_2ECE-D_PA3/blob/main/PA3_ELVAMBUENA.ipynb) and download.
 
 ### HISTORY
-September 3, 2026 - Final touches made the final improvements and corrections to the code and README.
+September 6, 2026 - Final touches made the final improvements and corrections to the code and README.
 
-September 1, 2026 - README structure Created the overall structure and organization of the README.
+September 3, 2026 - README structure Created the overall structure and organization of the README.
 
-September 1, 2026 - Initial commit Created the initial code and implemented the main functionality of the project.
+September 3, 2026 - Initial commit Created the initial code and implemented the main functionality of the project.
