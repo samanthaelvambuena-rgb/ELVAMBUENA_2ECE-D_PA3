@@ -54,6 +54,7 @@ cars_6_to_10.loc[:,['Model', 'mpg', 'cyl', 'hp',  'gear']]
 >a. Display the complete row for Toyota Corolla.
 >b. For Pontiac Firebird, display only Model, mpg, hp, and wt.
 >Store the two results in toyota and pontiac, respectively. Do not use a hard-coded row number to locate either model.
+
 The following functions were used in this problem:
 >Since PANDAS is already initialized in the first problem we can move on to the next function.
 To display the complete row for Toyota Corolla boolean indexing is used to generate only the row for Toyota Corolla.
