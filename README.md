@@ -57,6 +57,7 @@ cars_6_to_10.loc[:,['Model', 'mpg', 'cyl', 'hp',  'gear']]
 
 The following functions were used in this problem:
 >Since PANDAS is already initialized in the first problem we can move on to the next function.
+
 To display the complete row for Toyota Corolla boolean indexing is used to generate only the row for Toyota Corolla.
 ```python
 cars[cars['Model']=='Toyota Corolla']
@@ -100,6 +101,8 @@ Thank you for reading!
 To see the main python program, click this [link](https://github.com/samanthaelvambuena-rgb/ELVAMBUENA_2ECE-D_PA3/blob/main/PA3_ELVAMBUENA.ipynb) and download.
 
 ### HISTORY
+September 17, 2026 - Made a minor correction to README.
+
 September 6, 2026 - Final touches made the final improvements and corrections to the code and README.
 
 September 3, 2026 - README structure Created the overall structure and organization of the README.
